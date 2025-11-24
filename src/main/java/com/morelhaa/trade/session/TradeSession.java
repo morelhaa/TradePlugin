@@ -53,8 +53,6 @@ public class TradeSession {
         if (!TradeUtils.arePlayersValid(player1, player2)) {
             return false;
         }
-
-        // Crear inventario virtual de cofre doble
         if (!createTradeInventory()) {
             return false;
         }
@@ -125,15 +123,12 @@ public class TradeSession {
 
         Item button;
         if (!player1Ready && !player2Ready) {
-            // Ambos no listos - cristal rojo
             button = Item.get(95, 14);
             button.setCustomName("§cNinguno listo");
         } else if (player1Ready && player2Ready) {
-            // Ambos listos - cristal verde
             button = Item.get(95, 5);
             button.setCustomName("§a¡Ambos listos!");
         } else {
-            // Uno listo - cristal amarillo
             button = Item.get(95, 4);
             String readyPlayer = player1Ready ? player1.getName() : player2.getName();
             button.setCustomName("§e-" + readyPlayer + " está listo");
@@ -253,7 +248,6 @@ public class TradeSession {
             TradeUtils.playSoundToPlayers(player1, player2, Sound.RANDOM_LEVELUP);
         }
 
-        // Programar completación con delay
         int delay = plugin.getCompletionDelay();
         completionTaskId = plugin.getServer().getScheduler().scheduleDelayedTask(plugin, () -> {
             completeTrade();
