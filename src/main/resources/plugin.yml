@@ -1,0 +1,17 @@
+name: TradePlugin
+main: com.morelhaa.trade.TradePlugin
+version: "1.0.0"
+api: ["1.0.0"]
+author: morelhaa
+description: Sistema de intercambio seguro entre jugadores
+
+permissions:
+  trade.use:
+    description: Permite usar el comando de intercambio
+    default: true
+  trade.bypass.blacklist:
+    description: Permite intercambiar items en la blacklist
+    default: op
+  trade.admin:
+    description: Permisos de administrador para el sistema de trades
+    default: op

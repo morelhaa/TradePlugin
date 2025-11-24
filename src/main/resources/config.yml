@@ -1,0 +1,93 @@
+
+# Tiempo en segundos para que expire una solicitud de trade
+request-timeout: 30
+
+# Habilitar sonidos durante el trade
+sounds-enabled: true
+
+# Items que NO pueden ser intercambiados
+# Formato: ID:META (usa 0 para cualquier meta)
+blacklist:
+  enabled: true
+  items:
+    - "137:0"    # Command Block
+    - "120:0"    # End Portal Frame
+    - "119:0"    # End Portal
+    - "90:0"     # Portal del Nether
+    - "52:0"     # Spawner
+    - "7:0"      # Bedrock
+    - "95:0"     # Estructura Void (1.10+)
+
+# MENSAJES
+messages:
+  prefix: "§8[§6Trade§8]§r"
+
+  # Solicitudes
+  request-sent: "§aSolicitud de trade enviada a §e{player}§a."
+  request-received: "§e{player}§a te ha enviado una solicitud de trade."
+  request-expired: "§cLa solicitud de trade ha expirado."
+  request-cancelled: "§cSolicitud de trade cancelada."
+
+  # Errores
+  player-not-found: "§cJugador no encontrado o no está en línea."
+  cannot-trade-yourself: "§cNo puedes comerciar contigo mismo."
+  already-in-trade: "§cYa estás en un intercambio."
+  target-in-trade: "§c{player} ya está en un intercambio."
+  already-sent-request: "§cYa has enviado una solicitud a este jugador."
+  pending-request: "§cYa tienes una solicitud pendiente."
+  no-permission: "§cNo tienes permiso para usar este comando."
+
+  # Trade activo
+  trade-started: "§aIntercambio iniciado con §e{player}§a."
+  trade-ready: "§aEstás listo para el intercambio."
+  trade-not-ready: "§eYa no estás listo para el intercambio."
+  partner-ready: "§e{player}§a está listo para el intercambio."
+  partner-not-ready: "§e{player}§c ya no está listo."
+  both-ready: "§a¡Ambos jugadores están listos! El intercambio se completará en breve..."
+  trade-completed: "§a¡Intercambio completado con éxito!"
+  trade-cancelled: "§cIntercambio cancelado."
+  partner-cancelled: "§e{player}§c ha cancelado el intercambio."
+
+  # Blacklist
+  blacklist-item: "§cNo puedes intercambiar este item (está en la blacklist)."
+  blacklist-warning: "§eAdvertencia: Estás intentando intercambiar un item prohibido."
+
+  # Inventario
+  inventory-full: "§cTu inventario está lleno. Libera espacio antes de completar el trade."
+  partner-inventory-full: "§cEl inventario de §e{player}§c está lleno."
+
+  # GUI
+  gui-title: "§8Intercambio con {player}"
+  ready-item-name: "§aHaz clic para estar LISTO"
+  not-ready-item-name: "§cHaz clic para CANCELAR"
+  separator-name: "§7═══════════════"
+  your-side: "§eTu lado →"
+  their-side: "§e← Lado de {player}"
+
+# CONFIGURACIÓN DE LA GUI
+gui:
+  # Posición del botón "Listo" (slot del cofre doble)
+  ready-button-slot: 49
+
+  # Slots de los cristales separadores (columna del medio)
+  separator-slots:
+    - 4
+    - 13
+    - 22
+    - 31
+    - 40
+    - 49
+
+# CONFIGURACIÓN AVANZADA
+advanced:
+  # Distancia máxima entre jugadores para iniciar trade
+  max-distance: 15
+
+  # Verificar distancia durante el trade
+  check-distance: true
+
+  # Cancelar trade si un jugador se aleja
+  cancel-on-distance: true
+
+  # Tiempo en ticks para completar el trade después de que ambos estén listos
+  completion-delay: 40  # 2 segundos (20 ticks = 1 segundo)

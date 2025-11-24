@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TradePlugin:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TradePlugin_jar</output-path>
+    <root id="archive" name="TradePlugin.jar">
+      <element id="module-output" name="TradePlugin" />
+    </root>
+  </artifact>
+</component>
