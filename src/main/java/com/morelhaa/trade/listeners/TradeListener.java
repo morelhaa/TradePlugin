@@ -97,10 +97,7 @@ public class TradeListener implements Listener {
             return;
         }
 
-        // Verificar si es el inventario del trade
         if (event.getInventory().equals(session.getInventory())) {
-            // Cancelar el trade después de un pequeño delay
-            // para evitar problemas con el cierre automático
             plugin.getServer().getScheduler().scheduleDelayedTask(plugin, () -> {
                 if (plugin.getTradeManager().getSession(player) != null) {
                     Player other = session.getOtherPlayer(player);
