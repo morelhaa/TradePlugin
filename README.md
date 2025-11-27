@@ -1,4 +1,4 @@
-Descripción
+# TradePlugin
 
 TradePlugin es un sistema de intercambio seguro para Nukkit, que permite a dos jugadores intercambiar objetos mediante una interfaz visual tipo cofre doble.
 El intercambio solo se completa cuando ambos jugadores aceptan, protegiendo los items y evitando duplicaciones o pérdidas accidentales.
